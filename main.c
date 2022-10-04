@@ -3,18 +3,22 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
-	int sum = 0;
-	int x;
-	int i;
+int main() {
+	int x, y;
+	char op;
+		
+	printf("enter the calculation:");
+	scanf("%d %c %d", &x, &op, &y);
 	
-	printf("input a integer:");
-	scanf("%d", &x);
-	
-	for(i=0;i<=x;i++)
-		sum = sum + i;
-	
-	printf("The sum is %i.\n ",sum);
-	
+	if(op == '+') 
+	printf("= %d\n", x+y);
+	else if(op == '-')
+	printf("= %d\n", x-y);
+	else if(op == '*')
+	printf("= %d\n", x*y);
+	else
+	printf("= %d\n", x/y);
+
+		
 	return 0;
 }
