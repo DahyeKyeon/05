@@ -9,15 +9,11 @@ int main(int argc, char *argv[]) {
 	printf("enter an integer:");
 	scanf("%d", &x);
 	
-	if(x>0)
-	printf("positive integer\n");
-	
-	else if(x<0)
-	printf("negative integer\n");
+	if(x>=0)
+	printf("Absolute value is %d.\n", x);
 	
 	else
-	printf("0\n");
-	
+	printf("Absolute value is %d.\n", -1*x);
 	
 	return 0;
 }
