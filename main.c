@@ -4,21 +4,22 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main() {
-	int x, y;
-	char op;
-		
-	printf("enter the calculation:");
-	scanf("%d %c %d", &x, &op, &y);
+	int answer = 59;
+	int x;
+	int trial=0;
 	
-	if(op == '+') 
-	printf("= %d\n", x+y);
-	else if(op == '-')
-	printf("= %d\n", x-y);
-	else if(op == '*')
-	printf("= %d\n", x*y);
-	else
-	printf("= %d\n", x/y);
-
+	do{
+		printf("Guess a number:");
+		scanf("%d", &x);
+		trial++;
+		if(x<answer){
+			printf("low!\n");
+		}
+		else if(x>answer){
+			printf("high!\n");
+		}
+	}while(x != answer);
+	printf("congrats! trial:%d\n", trial);
 		
 	return 0;
 }
